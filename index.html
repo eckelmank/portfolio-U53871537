@@ -32,7 +32,7 @@
   <main class="container fade-in">
 
     <!-- About -->
-    <section id="about" class="section card">
+    <section id="about" class="section card reveal-on-scroll">
       <h2>About Me</h2>
       <p>
         I am a graduate student in the Master’s of Artificial Intelligence & Business Analytics (MSAIBA) program at the University of South Florida, with a B.S. in Finance from USF’s Muma College of Business. My work bridges application development, data analytics, and cybersecurity—with a focus on using machine learning to mitigate financial fraud and strengthen proactive threat intelligence.
@@ -43,7 +43,7 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="section card">
+    <section id="projects" class="section card reveal-on-scroll">
       <h2>Projects</h2>
 
       <div class="projects">
@@ -68,7 +68,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section card">
+    <section id="skills" class="section card reveal-on-scroll">
       <h2>Skills</h2>
       <ul class="skills">
         <li>HTML & CSS</li>
@@ -84,7 +84,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section card">
+    <section id="contact" class="section card reveal-on-scroll">
       <h2>Contact</h2>
       <p>
         Email: <a href="mailto:eckelmank@usf.edu"><eckelmank@usf.edu</a><br>
@@ -105,5 +105,40 @@
     // Auto year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+          <script>
+  // reveal sections when they enter the viewport
+  (function(){
+    const els = document.querySelectorAll('.reveal-on-scroll');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!('IntersectionObserver' in window) || reduce){
+      els.forEach(el => el.classList.add('revealed'));
+    } else {
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){
+            e.target.classList.add('revealed');
+            io.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.12});
+      els.forEach(el => io.observe(el));
+    }
+  })();
+
+  // optional: shrink header slightly after scrolling a bit
+  (function(){
+    const header = document.querySelector('.site-header');
+    const inner = document.querySelector('.header-inner');
+    if (!header || !inner) return;
+
+    const onScroll = () => {
+      if (window.scrollY > 40) header.classList.add('shrink');
+      else header.classList.remove('shrink');
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+</script>
 </body>
 </html>
