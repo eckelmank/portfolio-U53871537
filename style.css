@@ -1,11 +1,6 @@
-:root {
-  --bg: #E5D4B1;       /* warm clay background */
-  --panel: #F5F0E6;    /* sandstone cards */
-  --text: #2C2C2C;     /* main charcoal text */
-  --muted: #6B6B6B;    /* secondary text */
-  --brand: #FFD95A;    /* butter yellow */
-  --brand-2: #6B8E23;  /* olive green */
-  --ring: #C06014;     /* terracotta accent */
+:root{
+  --bg:#F6F1E4; --panel:#FFF9E8; --text:#2A2A2A; --muted:#6B5F57;
+  --brand:#FFD95A; --brand-2:#5E452A; --ring:#7E8D5A;
 }
 
 * { box-sizing: border-box; }
