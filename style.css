@@ -1,11 +1,11 @@
 :root {
-  --bg: #F6F1E4;       /* warm sand background */
-  --panel: #FFF9E8;    /* lighter cream cards */
-  --text: #2A2A2A;     /* main text (dark brown-gray) */
-  --muted: #6B5F57;    /* softer muted text */
-  --brand: #FFD95A;    /* butter yellow (primary highlight) */
-  --brand-2: #5E452A;  /* earthy brown (secondary) */
-  --ring: #7E8D5A;     /* olive accent (borders, focus) */
+  --bg: #FFFFFF;     
+  --panel: #FFF9E8;    
+  --text: #000000;     
+  --muted: #6B5F57;  
+  --brand: #FEF1CB;   
+  --brand-2: #FFE7CF;  
+  --ring: #FFCEDA;     
 }
 
 body {
