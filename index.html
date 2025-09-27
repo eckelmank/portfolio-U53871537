@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Your Name</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Personal portfolio showcasing projects, skills, and contact information." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="title">Your Name</h1>
+      <p class="tagline">Aspiring developer • Data & AI enthusiast • Problem solver</p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container fade-in">
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I’m a graduate student focusing on application development for analytics. I enjoy
+        building clean, usable interfaces and applying AI tools to speed up development and
+        improve quality. I’m currently exploring front-end frameworks and data visualization.
+      </p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="project-body">
+          <h3>Project One – Dashboard Prototype</h3>
+          <p>
+            A responsive dashboard that loads JSON data and visualizes KPIs. I focused on
+            semantic HTML, accessible components, and modular CSS.
+          </p>
+          <a class="btn" href="https://github.com/<your-username>/<repo-one>" target="_blank" rel="noopener">
+            View Repository
+          </a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-body">
+          <h3>Project Two – API Explorer</h3>
+          <p>
+            A small web app that fetches data from a public API and renders cards with lazy
+            loading. I used fetch(), async/await, and simple state management.
+          </p>
+          <a class="btn" href="https://github.com/<your-username>/<repo-two>" target="_blank" rel="noopener">
+            View Repository
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Git / GitHub</li>
+        <li>Data & AI tooling (e.g., Python, basic pandas)</li>
+        <li>Responsive design & accessibility</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:your.name@mail.com">your.name@mail.com</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      <p>© <span id="year"></span> Your Name • Built with HTML, CSS, and GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
