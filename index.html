@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio – Kaylee Eckelman</title>
+  <title>Kaylee Eckelman — Portfolio</title>
+  <meta name="description" content="Portfolio for Kaylee Eckelman — application development, data analytics, and cybersecurity." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Personal portfolio showcasing projects, skills, and contact information." />
+  <!-- Your stylesheet (the butter-yellow Earth tone theme) -->
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
+
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="title">Kaylee Eckelman</h1>
-      <p class="tagline">Developer • Analyst • Innovator in AI-driven business solutions.</p>
+    <div class="header-inner">
+      <div>
+        <h1 class="title">Kaylee Eckelman</h1>
+        <p class="tagline">Building clean, data-driven applications for cybersecurity and financial fraud prevention.</p>
+      </div>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -23,74 +28,81 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="container fade-in">
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>
-      I am a graduate student in the Master’s of Artificial Intelligence and Business Analytics (MSAIBA) program at the University of South Florida, with a Bachelor of Science in Finance from USF’s Muma College of Business. My academic and professional experience bridges data analytics, machine learning, and cybersecurity, with a particular focus on applying AI-driven methods to prevent financial fraud and strengthen proactive threat intelligence. 
-    </p>
-    <p>
-    I bring strong skills in SQL, Python, and data visualization (Excel, Tableau), as well as experience in database management, business statistics, and applied machine learning. Alongside my studies, I contribute to cybersecurity research and consulting efforts, managing projects that involve financial risk analysis, digital threat modeling, and sector-specific data insights. My long-term goal is to build a career at the intersection of data science, financial systems, and cybersecurity, developing solutions that protect organizations against evolving digital threats.
-  </p>
-</section>
 
-    <section id="projects" class="card">
-      <h2>Projects</h2>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>Project One – Dashboard Prototype</h3>
-          <p>
-            A responsive dashboard that loads JSON data and visualizes KPIs. I focused on
-            semantic HTML, accessible components, and modular CSS.
-          </p>
-          <a class="btn" href="https://github.com/<your-username>/<repo-one>" target="_blank" rel="noopener">
-            View Repository
-          </a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>Project Two – API Explorer</h3>
-          <p>
-            A small web app that fetches data from a public API and renders cards with lazy
-            loading. I used fetch(), async/await, and simple state management.
-          </p>
-          <a class="btn" href="https://github.com/<your-username>/<repo-two>" target="_blank" rel="noopener">
-            View Repository
-          </a>
-        </div>
-      </article>
+    <!-- About -->
+    <section id="about" class="section card">
+      <h2>About Me</h2>
+      <p>
+        I am a graduate student in the Master’s of Artificial Intelligence & Business Analytics (MSAIBA) program at the University of South Florida, with a B.S. in Finance from USF’s Muma College of Business. My work bridges application development, data analytics, and cybersecurity—with a focus on using machine learning to mitigate financial fraud and strengthen proactive threat intelligence.
+      </p>
+      <p>
+        I’m comfortable across the data stack (SQL, Python, Excel/Tableau) and have hands-on experience in database management, business statistics, and applied machine learning. I’m currently building a portfolio of practical, well-documented projects that highlight clean code, clear communication, and measurable impact.
+      </p>
     </section>
 
-    <section id="skills" class="card">
+    <!-- Projects -->
+    <section id="projects" class="section card">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="project">
+          <h3>Portfolio Website</h3>
+          <p>A professional portfolio built with HTML/CSS and hosted on GitHub Pages. Designed with an earth-tone palette and accessible components.</p>
+          <div>
+            <a class="btn" href="https://eckelmank.github.io/portfolio-U53871537/#projects>" target="_blank" rel="noopener">View Repository</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+          <h3>Airline Data Analysis (Demo)</h3>
+          <p>Python demo using pandas to explore flight delays and visualize average delay by airline with a simple bar chart.</p>
+          <div>
+            <a class="btn" href="https://github.com/eckelmank/airline-data-analysis" target="_blank" rel="noopener">View Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section card">
       <h2>Skills</h2>
       <ul class="skills">
-        <li>HTML5 / CSS3</li>
+        <li>HTML & CSS</li>
         <li>JavaScript (ES6+)</li>
-        <li>Git / GitHub</li>
-        <li>Data & AI tooling (e.g., Python, basic pandas)</li>
-        <li>Responsive design & accessibility</li>
+        <li>Python (pandas, matplotlib)</li>
+        <li>SQL</li>
+        <li>Git & GitHub</li>
+        <li>Data Visualization (Excel, Tableau)</li>
+        <li>Machine Learning (basics)</li>
+        <li>Business Statistics</li>
+        <li>Cyber Threat Intelligence (interests)</li>
       </ul>
     </section>
 
-    <section id="contact" class="card">
+    <!-- Contact -->
+    <section id="contact" class="section card">
       <h2>Contact</h2>
       <p>
-        Email: <a href="mailto:your.name@mail.com">your.name@mail.com</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a>
+        Email: <a href="mailto:eckelmank@usf.edu"><eckelmank@usf.edu</a><br>
+        LinkedIn: <a href="https://www.linkedin.com/in/kaylee-eckelman/" target="_blank" rel="noopener">https://www.linkedin.com/in/kaylee-eckelman/></a>
       </p>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container small">
-      <p>© <span id="year"></span> Your Name • Built with HTML, CSS, and GitHub Pages</p>
+      <p>© <span id="year"></span> Kaylee Eckelman • Built with HTML, CSS, and GitHub Pages</p>
     </div>
   </footer>
 
   <script>
+    // Auto year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
