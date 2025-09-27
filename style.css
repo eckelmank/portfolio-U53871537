@@ -142,4 +142,50 @@ main{ padding-top:10px; }
 
 /* optional: make title slightly smaller to free space */
 .title{ font-size: 1.6rem; }
+/* === smooth scroll === */
+html { scroll-behavior: smooth; }
+
+/* === shared easing === */
+:root { --ease: cubic-bezier(.22,.61,.36,1); }
+
+/* === card hover: gentle lift === */
+.card{ transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.card:hover{ transform: translateY(-3px); box-shadow: 0 14px 40px rgba(0,0,0,.12); }
+
+/* === buttons: crisp hover + press === */
+.btn{ transition: transform .15s var(--ease), filter .2s var(--ease), box-shadow .2s var(--ease); }
+.btn:hover{ transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.btn:active{ transform: translateY(0); }
+
+/* === skills chips: micro lift === */
+.skills li{ transition: transform .15s var(--ease), box-shadow .2s var(--ease); }
+.skills li:hover{ transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.08); }
+
+/* === nav underline slide === */
+.nav a{ position: relative; }
+.nav a::after{
+  content:"";
+  position:absolute; left:12px; right:12px; bottom:4px; height:2px;
+  background: var(--ring);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .2s var(--ease);
+  border-radius: 2px;
+}
+.nav a:hover::after{ transform: scaleX(1); }
+
+/* === reveal-on-scroll utility === */
+.reveal-on-scroll{ opacity:0; transform: translateY(8px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.reveal-on-scroll.revealed{ opacity:1; transform:none; }
+
+/* === optional: shrink header on scroll === */
+.site-header{ transition: padding .25s var(--ease), box-shadow .25s var(--ease); }
+.header-inner{ transition: padding .25s var(--ease); }
+.site-header.shrink{ box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+.site-header.shrink .header-inner{ padding-top: 8px; padding-bottom: 8px; }
+
+/* === accessibility: respect prefers-reduced-motion === */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+  .reveal-on-scroll{ opacity:1; transform:none; }
+}
 
