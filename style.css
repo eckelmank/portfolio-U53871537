@@ -123,3 +123,23 @@ main{ padding-top:10px; }
   .header-inner{ flex-direction:row; align-items:flex-end; justify-content:space-between }
   .projects{ grid-template-columns:1fr 1fr; }
 }
+/* === NAV NO-WRAP FIX === */
+.header-inner { flex-wrap: nowrap; }
+
+.nav{
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;      /* keep Contact on same line */
+  white-space: nowrap;    /* prevent wrapping */
+  flex: 0 0 auto;
+}
+
+.brand{ flex: 1 1 auto; min-width: 0; }  /* let title area shrink first */
+
+@media (max-width: 1024px){
+  .tagline{ display: none; }             /* hide tagline if space is tight */
+}
+
+/* optional: make title slightly smaller to free space */
+.title{ font-size: 1.6rem; }
+
